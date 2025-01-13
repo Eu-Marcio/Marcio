@@ -4,8 +4,8 @@ from tkinter import messagebox
 # Função para calcular a resistência
 def calcular_resistencia(event=None):
     try:
-        tensao = float(entry_tensao.get())
-        corrente = float(entry_corrente.get())
+        tensao = float(entry_tensao_res.get())
+        corrente = float(entry_corrente_res.get())
         resistencia = tensao / corrente
         
         # Calculando a potência (Tensão * Corrente)
@@ -180,8 +180,8 @@ def criar_entry(frame, label_text):
     return entry
 
 # Adicionando elementos nos frames
-entry_tensao = criar_entry(frame_resistencia, "Tensão (V):")
-entry_corrente = criar_entry(frame_resistencia, "Corrente (A):")
+entry_tensao_res = criar_entry(frame_resistencia, "Tensão (V):")
+entry_corrente_res = criar_entry(frame_resistencia, "Corrente (A):")
 tk.Button(frame_resistencia, text="Calcular Resistência (Ω)", command=calcular_resistencia,
           font=fonte_padrao, bg=cor_destaque, fg="#FFFFFF", activebackground="#FF8C00").pack(pady=10)
 
